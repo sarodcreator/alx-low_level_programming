@@ -10,12 +10,12 @@
 
 int main(void)
 {
-	int i = 122;
+	int n = 122;
 
-	while (i > 96)
+	while (n > 96)
 	{
-		putchar(i);
-		i--;
+		putchar(n);
+		n--;
 	}
 	putchar(10);
 
