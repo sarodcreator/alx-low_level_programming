@@ -1,15 +1,3 @@
-Latest commit
-aucontraire
-aucontraire
-Add program to print single digit numbers
-6 years ago
-History
-26 lines (20 loc) · 255 Bytes
-File metadata and controls
-
-Code
-
-Blame
 #include <stdio.h>
 
 /**
@@ -36,4 +24,3 @@ int main(void)
 
 	return (0);
 }
-
