@@ -1,12 +1,23 @@
 #include <stdio.h>
 
-int main(){
-	char  n;
-	n = 'z';
-	while (n >= 'a'){
-	    putchar(n);
-	    n--;
+/**
+ * main - print the letters of the alphabet
+ *
+ * Description: print the letters of the alphabet in reverse
+ *
+ * Return: Always 0 (Success)
+ */
+
+int main(void)
+{
+	int i = 122;
+
+	while (i > 96)
+	{
+		putchar(i);
+		i--;
 	}
 	putchar(10);
+
 	return (0);
 }
