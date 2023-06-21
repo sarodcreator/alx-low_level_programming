@@ -9,6 +9,6 @@ void positive_or_negative(int i)
 		printf("i is a negative number \n");
 	}
 	else{
-		printf("i is zero");
+		printf("i is zero \n");
 	}
 }
