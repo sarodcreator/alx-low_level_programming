@@ -14,7 +14,9 @@ int  power(int base, int exp)
 
 	num = 1;
 	for (i = 0; i < exp; ++i)
+	{
 		num *= base;
+	}
 
 	return (num);
 }
@@ -51,7 +53,9 @@ void print_number(int n)
 		{
 			begin = 1;
 			if (negative == 1)
+			{
 				_putchar('-');
+			}
 			_putchar('0' + digit);
 			place--;
 		}
