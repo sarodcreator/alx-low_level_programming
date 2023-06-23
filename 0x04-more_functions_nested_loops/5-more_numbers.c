@@ -4,7 +4,6 @@
  *
  * Return: void
  */
-
 void more_numbers(void)
 {
 	int line, n, repeat, limit;
@@ -15,10 +14,9 @@ void more_numbers(void)
 
 	for (line = 0; line < 10; line++)
 	{
-		while
+		while (repeat < 2)
 		{
-
-			while (repeat <=  limit)
+			while (n <= limit)
 			{
 				if (limit == '4')
 				{
@@ -31,9 +29,9 @@ void more_numbers(void)
 			limit = '4';
 			n = '0';
 		}
-	_putchar('\n');
-	repeat = 0;
-	n = '0';
-	lilit = '9';
+		_putchar('\n');
+		repeat = 0;
+		n = '0';
+		limit = '9';
 	}
 }
