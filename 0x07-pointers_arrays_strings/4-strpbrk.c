@@ -1,15 +1,16 @@
-#include "main.h" 
+#include "main.h"
 
 /**
- * _strpbrk - locates the first occurrence in "s" of any bytes in "accept"
- * @s: the string to bw scanned
- * @accept: the string containing the characters to match
+ * _strpbrk - function that searches a string
+ * @s: tring to search
+ * @accept: character to search for
  *
- * Return: pointer to the first matching character
+ * Return: s if found and NULL if not
  */
+
 char *_strpbrk(char *s, char *accept)
 {
-	int i, j;
+	unsigned int i, j;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
@@ -17,7 +18,8 @@ char *_strpbrk(char *s, char *accept)
 		{
 			if (s[i] == accept[j])
 			{
-				return (s + i);
+				s = &s[i];
+				return (s);
 			}
 		}
 	}
