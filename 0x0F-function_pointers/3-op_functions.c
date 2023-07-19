@@ -9,50 +9,59 @@
  *
  * Return: sum
  */
+
 int op_add(int a, int b)
 {
 	return (a + b);
 }
+
 /**
- * op_sub - sub 2 numbers
+ * op_sub - difference of 2 numbers
  * @a: first number
  * @b: second number
  *
- * Return: sub
+ * Return: difference
  */
+
 int op_sub(int a, int b)
 {
 	return (a - b);
 }
+
 /**
- * op_mul - mul of 2 numbers
+ * op_mul - product of 2 numbers
  * @a: first number
  * @b: second number
  *
- * Return: mul
+ * Return: product
  */
+
 int op_mul(int a, int b)
 {
 	return (a * b);
 }
+
 /**
- * op_div - div of 2 numbers
- * @a: first numbe
- * @b: second number 
+ * op_div - divide 2 numbers
+ * @a: first number
+ * @b: second number
  *
- * Return: div
+ * Return: division
  */
+
 int op_div(int a, int b)
 {
 	return (a / b);
 }
+
 /**
- * op_mod - mod of 2 numbers
+ * op_mod - modulus of 2 numbers
  * @a: first number
  * @b: second number
  *
- * Return: div
+ * Return: modulos
  */
+
 int op_mod(int a, int b)
 {
 	return (a % b);
