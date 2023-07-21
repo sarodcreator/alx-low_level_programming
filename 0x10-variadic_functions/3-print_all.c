@@ -1,6 +1,12 @@
-#include <stdarg.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdarg.h>
 #include "variadic_functions.h"
+#include "printc.c"
+#include "printi.c"
+#include "print_f.c"
+#include "prints.c"
+
 /**
  * print_all - print everything
  * @format: type to print
@@ -9,39 +15,33 @@
 
 void print_all(const char * const format, ...)
 {
-	va_list arg;
-	unsigned int i = 0;
-	char format_type;
-	char *str;
+	int i, j;
+	char *separator = "";
+	va_list vprint;
 
-	va_start(arg, format);
-	while (format && format[i])
+	types opt[] = { {'c', printc},
+			      {'i', printi},
+			      {'f', print_f},
+			      {'s', prints},
+			      {'\0', NULL} };
+
+	va_start(vprint, format);
+	i = 0;
+	while (format != NULL && format[i] != '\0')
 	{
-		format_type = format[i];
-		switch (format_type)
+		j = 0;
+		while (opt[j].c != '\0')
 		{
-			case 'c':
-				printf("%c", va_arg(arg, int));
-				break;
-			case 'i':
-				printf("%d", va_arg(arg, int));
-				break;
-			case 'f':
-				printf("%f", va_arg(arg, double));
-				break;
-			case 's':
-				str = va_arg(arg, char *);
-				if (str == NULL)
-					str = "(nil";
-				printf("%s", str);
-				break;
-			default:
-				break;
+			if (opt[j].c == format[i])
+			{
+				printf("%s", separator);
+				opt[j].f(vprint);
+				separator = ", ";
+			}
+			j++;
 		}
-		if (format[i + 1])
-			printf(", ");
 		i++;
 	}
-	va_end(arg);
+	va_end(vprint);
 	printf("\n");
 }
