@@ -1,6 +1,6 @@
 #include "lists.h"
 
-void pre_main_message(void) __attribue__((constructor));
+void pre_main_message(void) __attribute__((constructor));
 
 /**
  * pre_main_message - Prints a message before main is executed.
